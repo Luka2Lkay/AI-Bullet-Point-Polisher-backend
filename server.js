@@ -47,7 +47,7 @@ app.post("/api/polish", async (req, res) => {
 
     res.json({ polishedBullet: cleaned });
   } catch (error) {
-    console.error("Error polishing bullet points:", error);
+    console.error("Error polishing bullet point:", error);
     res
       .status(500)
       .json({ error: "An error occurred while polishing bullet points." });
