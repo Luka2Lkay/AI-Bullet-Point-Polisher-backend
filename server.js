@@ -12,3 +12,11 @@ app.use(express.json());
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
+
+app.post('/polish', async (req, res) => {
+
+try{}catch (error) {
+    console.error('Error polishing bullet points:', error);
+    res.status(500).json({ error: 'An error occurred while polishing bullet points.' });
+  }
+});
